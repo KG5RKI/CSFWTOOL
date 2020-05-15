@@ -1,1 +1,21 @@
+Connect Systems Firmware Tool | by KG5RKI
+Usage: csfwtool [option(s)] -i input.bin -o output.bin
+Examples:
+        csfwtool -e -i plaintext.bin -o image.bin
+        csfwtool -d -i stockfw.bin -o decrypted_unwrapped.bin
+Options:
+        -h, --help                                                show this help message
+        -i [flash], --input [flash]                                     flash file input
+        -o [flash], --output [flash]                                   flash file output
+        -d, --decrypt                                           decrypt input image file
+        -e, --encrypt                                             encrypt and add header
+        -r, --resource                       specify resource type file (spi flash data)
+        -b [baseaddr], --base [baseaddr] specify base address offset (subtract 0x08000000) default: 0x20000
+        -1, --CS800_cipher                                        (default) CS800 cipher
+        -2, --DR5XX0_cipher                                      (default) DR5XX0 cipher
+
+
+Compile
+--------------
 g++ csfwtool.cpp -o csfwtool
+
