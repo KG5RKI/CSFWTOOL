@@ -94,11 +94,11 @@ const uint8_t xor_cipher_DR5XX0[0x100]={
 void print_header_info(CS800D_header *h)
 {
     printf("Header Information -\n");
-    printf("\timage size - %d\n", h->imagesize);
-    printf("\timage header size - %d\n", h->imageHeaderSize);
-    printf("\tbase address offset %d\n", h->baseaddr_offset);
-    printf("\tresource header size - %d\n", h->rsrcHeaderSize);
-    printf("\tresource size - %d\n", h->rsrc_size);
+    printf("\timage size - %08X\n", h->imagesize);
+    printf("\timage header size - %08X\n", h->imageHeaderSize);
+    printf("\tbase address offset %08X\n", h->baseaddr_offset);
+    printf("\tresource header size - %02X\n", h->rsrcHeaderSize);
+    printf("\tresource size - %08X\n", h->rsrc_size);
     printf("\tversion - %d\n", h->version);
 }
 
