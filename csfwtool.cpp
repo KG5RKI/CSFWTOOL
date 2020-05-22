@@ -260,7 +260,7 @@ int main(int argc, char** argv)
     printf("\n");
     uint8_t a=0,b=0,c=0;
     uint32_t xor_ctr=0;
-    for(int i=0; i<fsize; i++){
+    for(int i=0; (i<fsize && fencrypt) || (i<(fsize-0x80) && fdecrypt); i++){
         fread(&a, 1, 1, fin);
         
         if(keysel==1)
